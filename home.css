@@ -1,0 +1,95 @@
+			body {
+				background-color: #81B9E3;
+				font-family: 'Concert One', cursive;
+			}
+
+			h1 {
+				color: #2F90DA;
+				font-size: xxx-large;
+				font-family: 'Concert One', cursive;
+			}
+
+      h2 {
+				font-family: 'Handlee', cursive;
+			}
+
+			.intro {
+				animation-duration: 2s;
+				animation-name: intro;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+			}
+
+			@keyframes intro {
+				0% {
+					transform: translate(0, -10px);
+				}
+
+				50% {
+					transform: translate(0, 10px);
+				}
+
+				100% {
+					transform: translate(0, -10px);
+				}
+			}
+
+			.block {
+				text-align: center;
+				align-content: center;
+				display: block;
+				width: 60%;
+				border-top: 15px solid #2F90DA;
+				border-bottom: 15px solid #2F90DA;
+				padding: 50px;
+				margin: auto;
+				margin-top: 5%;
+				margin-bottom: 5%;
+				background-color: #DCEEF5;
+			}
+
+			.button {
+				border-radius: 4px;
+				background-color: #419DE3;
+				border: none;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 20px;
+				padding-left: 55px;
+				padding-right: 55px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 5px;
+			}
+
+			.button span {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+
+			.button span:after {
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+
+			.button:hover span {
+				padding-right: 25px;
+			}
+
+			.button:hover span:after {
+				opacity: 1;
+				right: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit
+			}

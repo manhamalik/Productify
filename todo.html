@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>To Do List</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Actor&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Handlee&family=Actor&display=swap" rel="stylesheet">
+    <link href="todo.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+    
+		<div style="background-color: #DCEEF5; padding: 20px; text-align: center;">
+			<h1> 📖 To Do List 📖</h1>
+			<h2 style="margin-top: 0; margin-left: 20%; margin-right: 20%">Make your own to do list!</h2>
+      <h3>Type your task and click "Add". Once your task is completed, just click on the task to cross it off. Press the x button on the far right of a task to remove it.</h3>
+			<h4 style="margin-bottom: 3%;">Go back to <a href="home.html">Productify Home</a> or <a href="navigate.html">Navigation</a></h4>
+		</div><br/>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">📖 My To Do List 📖</h2>
+  <input type="text" id="myInput" placeholder="New Task...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL"></ul>
+<script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Productify</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Handlee&family=Actor&display=swap" rel="stylesheet">
+    <link href="aindex.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="block">
+			<div style="text-align: center;" class="intro">
+				<h1 style="margin-bottom: 1.5%"> 📘 Productify 📘</h1>
+    <br />
+				<h2 style="margin-top: 0; margin-bottom: 3%"> Use this productivity website to "Productify" your life!</h2>
+    <br />
+        <a class="button" ref="navigate.html" onclick="googleSignIn()"><span>START</span></a>
+	    </div>
+		</div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first --> 
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB0-v5SvxEUi8QiUtbu_VyfS3vvzkpp2qU",
+    authDomain: "productify-36d63.firebaseapp.com",
+    projectId: "productify-36d63",
+    storageBucket: "productify-36d63.appspot.com",
+    messagingSenderId: "14127753805",
+    appId: "1:14127753805:web:b50e1709ed25b638ceca04",
+    measurementId: "G-WHYBXT0DM1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  googleSignIn=()=>{
+  base_provider = new firebase.auth.GoogleAuthProvider()
+  firebase.auth().signInWithPopup(base_provider).then(function(result){
+    console.log(result)
+    console.log("Success... Google Account Linked")
+       firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = 'navigate.html'; //After successful login, user will be redirected to home.html
+  }
+  firebase.auth().setPersistence('local')
+
+});
+  }).catch(function(err){
+console.log(err)
+console.log("Failed")
+  })
+}
+</script>
+
+	<center><div style="background-color: #2F90DA; margin-bottom: 0; width: 50%; margin-left: 10%; margin-right: 10%">
+			<h1 style="margin-bottom: 0; color: white; font-size: xx-large; text-align: center; padding: 20px; font-family: 'Actor'"> 📖📚 How To Use Productify 📚📖</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NB52uaJGfGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
+			</div>
+		</div>
+
+	</body>
+</html>
